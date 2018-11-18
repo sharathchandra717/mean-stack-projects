@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            #main {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            #main td, #main th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            
+            #main tr:nth-child(even){background-color: #f2f2f2;}
+            
+            #main tr:hover {background-color: #ddd;}
+            
+            #main th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+            #add {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            input {
+                /* width: 100%; */
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <br><br><br>
+        <center>
+            
+                <input type="number" id="rno" placeholder="ROLL NO" /> 
+                <input type="text" id="name" placeholder="NAME"  />
+                <input type="text" id="sec" placeholder="Section" maxlength="1" style="text-transform:uppercase" />
+                <br><br>
+                <input type="button" value="+Add" id ="add">
+        </center>
+    </div>
+    <br>
+    <div>
+        <center>
+            <table id="main" border="1">
+                <tbody id="tab">
+
+                </tbody>
+            </table>
+        </center>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
