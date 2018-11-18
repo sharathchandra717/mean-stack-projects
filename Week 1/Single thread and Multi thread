@@ -1,0 +1,27 @@
+Multithreaded Programming
+
+1. In this type of programming multiple threads run at the same time.
+
+2. Multi threaded model doesn’t use event loop with polling.
+
+3. CPU time is never wasted.
+
+4.Idle time is minimum.
+
+5. It results in more efficient programs.
+
+6. When one thread is paused due to some reason, other threads run as normal.
+
+Single Threaded Programming
+
+1. In this type of programming a single thread runs at a time.
+
+2. Single threaded model uses a process event loop with polling.
+
+3. CPU time is wasted.
+
+4. Idle time is more.
+
+5. It results in less efficient programs.
+
+6. When one thread is paused, the system waits until this thread is resumed.

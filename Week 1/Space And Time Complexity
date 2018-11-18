@@ -1,0 +1,33 @@
+Space complexity is the amount of memory used by the algorithm (including the input values to the algorithm) to execute and 
+produce the result.
+Sometime Auxiliary Space is confused with Space Complexity. But Auxiliary Space is the extra space or the temporary space 
+used by the algorithm during it's execution.
+
+Space Complexity = Auxiliary Space + Input space
+
+-------------------------------------------------------------------------------
+
+Time complexity of an algorithm signifies the total time required by the program to run till its completion.
+
+Usually, the time required by an algorithm falls under three types −
+
+Best Case − Minimum time required for program execution.
+
+Average Case − Average time required for program execution.
+
+Worst Case − Maximum time required for program execution.
+
+Asymptotic notations are used to calculate the running time complexity of an algorithm.
+
+Ο Notation
+Ω Notation
+θ Notation
+
+Big Oh Notation, Ο
+It measures the worst case time complexity or the longest amount of time an algorithm can possibly take to complete.
+
+Omega Notation, Ω
+It measures the best case time complexity or the best amount of time an algorithm can possibly take to complete.
+
+Theta Notation, θ
+It measures the average case time complexity or the average amount of time an algorithm can possibly take to complete.

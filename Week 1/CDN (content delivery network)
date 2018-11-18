@@ -1,0 +1,7 @@
+A CDN (content delivery network), also called a content distribution network, is a group of geographically distributed and 
+interconnected servers that provide cached internet content from a network location closest to a user to accelerate its 
+delivery. The primary goal of a CDN is to improve web performance by reducing the time needed to transmit content and 
+rich media to users' internet-connected devices.
+Content delivery network architecture is also designed to reduce network latency, which is often caused by traffic over 
+long distances and across multiple networks. Eliminating latency has become increasingly important, as more dynamic 
+content, video and software as a service are delivered to a growing number of mobile devices.

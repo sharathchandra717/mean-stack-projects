@@ -1,0 +1,28 @@
+The difference is that in the first example, the program will block in the first line. The next line (console.log) will have to wait.
+
+In the second example, the console.log will be executed WHILE the query is being processed. That is, the query will be processed 
+in the background, while your program is doing other things, and once the query data is ready, you will do whatever you want with it.
+
+So, in a nutshell: The first example will block, while the second won't.
+
+The output of the following two examples:
+
+// Example 1 - Synchronous (blocks)
+var result = database.query("SELECT * FROM hugetable");
+console.log("Query finished");
+console.log("Next line");
+
+
+// Example 2 - Asynchronous (doesn't block) 
+database.query("SELECT * FROM hugetable", function(result) {
+    console.log("Query finished");
+});
+console.log("Next line");
+
+Would be:
+
+1.  Query finished
+    Next line
+
+2.  Next line
+    Query finished

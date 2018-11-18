@@ -1,0 +1,4 @@
+V8 compiles JavaScript directly to native machine code before executing it, instead of more traditional techniques such as interpreting 
+bytecode or compiling the whole program to machine code and executing it from a filesystem.
+The compiled code is additionally optimized (and re-optimized) dynamically at runtime,
+based on heuristics of the code's execution profile.

@@ -1,0 +1,5 @@
+Here the IO operations are performed independent of other system operations. Your system won’t let you to go into wait state, 
+rather it can perform other operations which are independent of required IO. Response from IO devices are furnished to the 
+system once the operation completes, however system wouldn't stall in that time. Once you get the response, it can trigger 
+some function to be completed. Any new requests sent to the same IO device will be queued and responses are also returned 
+one after other.

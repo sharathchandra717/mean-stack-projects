@@ -1,0 +1,13 @@
+MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web applications. 
+The MEAN stack is MongoDB, Express.js, AngularJS, and Node.js.
+The MERN is also similar to MEAN stack except the Angular.js is replaced by React.js.
+
+Node.js is a server side JavaScript execution environment. It’s a platform built on Google Chrome’s V8 JavaScript runtime.
+
+Express is lightweight framework used to build web applications in Node.
+
+MongoDB is a NoSQL database system. MongoDB saves data in binary JSON format which makes it easier to pass data between client and server.
+
+AngularJS is a JavaScript-based open-source front-end web application framework mainly maintained by Google
+
+React is a JavaScript library for building user interfaces. It is maintained by Facebook
