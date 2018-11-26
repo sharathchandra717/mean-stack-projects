@@ -1,0 +1,57 @@
+<div class="background">
+  <!-- <input type="text" [(ngModel)]="key" (keyup.enter)="search()"/><br>
+  <button (click)="search()">Search</button> -->
+  <div class="show">
+
+  </div>
+  <div>
+    <mat-card>
+      <mat-card-content>
+        <div>
+          <mat-form-field class="example-full-width">
+            <input matInput id="find" placeholder="Enter a word to search..." [(ngModel)]="key" (keyup.enter)="search()"/>
+          </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)="search()" >Search</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <br>
+  <div id="loading">
+      <mat-card>  
+          <mat-card-content>
+              <mat-spinner></mat-spinner>
+          </mat-card-content>
+      </mat-card>
+  </div>
+  <div id="displayData">
+    <mat-card> 
+      <mat-card-header>
+        <mat-card-title [(ngModel)]="data"><h2>{{data.id}}</h2></mat-card-title>
+      </mat-card-header>  
+      <mat-card-content>
+        <div *ngFor="let item of data.lexicalEntries">
+          <br>
+          <b>{{item.lexicalCategory}}</b>
+          <br>
+          <div *ngFor="let item1 of item.entries">
+            <p class="indent">
+                {{item1.senses[0].definitions}}
+                {{item1.senses[0].short_definitions}}
+            </p>
+            
+              <!-- <div *ngFor="let item2 of item1.senses">
+                {{item2.definitions}}
+              </div> -->
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  
+</div>
+
+
