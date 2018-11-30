@@ -1,13 +1,11 @@
 const http = require('http');
 const fs=require('fs');
-let fdata='';
 http.createServer( (req, res) => {
   	
 	if(req.url==='/Create' || req.url==='/create'){
         res.write("Creating and writing to a file.",fs.writeFile('sample.txt', 'The quick brown fox jumps over the lazy dog', 
                     	(err)=>{
     				if (err) console.log(err);
-    				console.log("File created successfully");
 			}));
 		res.end();
     }
@@ -16,9 +14,7 @@ http.createServer( (req, res) => {
                     	(err, data)=>{
                         	if (err) console.log(err);
                         	else{
-                            		fdata=data;
-                            		console.log("File read successfully.");
-                            		res.end(fdata);
+                            		res.end(data);
                         	}
 			}));
 		//res.end(fdata);
@@ -27,7 +23,6 @@ http.createServer( (req, res) => {
         res.write("Appending data to a file.",fs.appendFile('sample.txt', '\nFox is jumping again', 
                     	(err, data)=>{
     				if (err) console.log(err);
-    				console.log("File appended successfully.");
 			}));
 		res.end();
 	}	
@@ -35,7 +30,6 @@ http.createServer( (req, res) => {
         res.write("Deleting the file content.",fs.writeFile('sample.txt','', 
                     	(err)=>{
     				if (err) console.log(err);
-    				console.log("File content deleted successfully.");
 			}));
 		res.end();
 	}
