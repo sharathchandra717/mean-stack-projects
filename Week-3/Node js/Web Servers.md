@@ -54,3 +54,12 @@ http://localhost/ (if you selected a port other than 80, such as 81, type http:/
 ```
 10. To verify, open a browser and type localhost and press enter. If you get "Welcome to nginx!” message then Nginx has been installed successfully.
 - - - -
+# Node Js
+```
+var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('Hello World!');
+}).listen(8080);
+```
