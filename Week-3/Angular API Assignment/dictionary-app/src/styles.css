@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css" ;
+
+/* *{
+    font-family: 'Quicksand', sans-serif;
+} */
+.example-full-width {
+    width: 100%;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+#displayData{
+    display: none;
+}
+/* li{
+    list-style-type: none;
+} */
+.indent{
+    padding-left: 10px;
+}
+#loading{
+    display: none; 
+    
+}
+mat-spinner{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+.back{
+    background: rgb(250, 250, 250);
+}
+.red{
+    height: 5px;
+    width: 100%;
+    background: #000;
+    border-radius: 4px 4px 0px 0px;
+}

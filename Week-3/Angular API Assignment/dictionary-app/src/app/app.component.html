@@ -1,0 +1,59 @@
+<div>
+
+  <div>
+      <div class="red"></div>
+    <mat-card>
+      <br>
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input id="find" matInput placeholder="Enter a word to search..." [(ngModel)]="key" (keyup.enter)="search()"/>
+        </mat-form-field>
+        <button mat-raised-button color="primary" style="background: #000;" (click)="search()">Search</button>
+      </mat-card-content>
+      <h1 style="font-family: 'Pacifico', cursive;text-align: center;font-size:250%;">Search from the global dictionary</h1>
+      <br>
+    </mat-card>
+  </div> 
+  <br>
+  <div id="loading">
+      <mat-card>  
+          <mat-card-content>
+              <mat-spinner></mat-spinner>
+          </mat-card-content>
+      </mat-card>
+  </div>
+  
+  <div id="displayData">
+    <mat-card>
+      <mat-card-header>
+          <mat-card-title>
+            <h2>{{mname}} 
+                <button href="#" mat-mini-fab color="warn" style="background: #000;" onclick="document.getElementById('player').play()">Play</button>
+            </h2>
+            <audio id="player" src="{{audio}}"></audio>
+            <div>
+                
+            </div>
+          </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <div *ngFor="let item of data">
+              <br>
+              <b>{{item.lexicalCategory}}</b>
+              <br>
+              <div *ngFor="let item1 of item.entries">
+                <p class="indent">
+                    {{item1.senses[0].definitions[0]}};&nbsp;
+                    {{item1.senses[0].short_definitions[0]}}
+                </p>
+                
+                  <!-- <div *ngFor="let item2 of item1.senses">
+                    {{item2.definitions}}
+                  </div> -->
+              </div>
+            </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
