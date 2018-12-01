@@ -1,0 +1,15 @@
+
+<div class="list1">
+  <h2>Items</h2>
+  <hr>
+  <div class="list">
+    <table width="100%">
+      <tr *ngFor="let item of list">
+        <div class="row">
+          <td width="65%" style="text-align: left;">{{item}}</td>
+          <td width="27%"><button (click)="additem()">Add to cart</button></td>
+        </div>  
+      </tr> 
+    </table>
+  </div>
+</div>
