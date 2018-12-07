@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Socket Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div class="head"><h1>Chat App</h1></div>
+        <div id="screen"></div>
+        <div class="user">
+            <input id="username" type="text" placeholder="Enter Username" value="" /><br>
+            <input id="message" type="text" placeholder="Enter Message" />
+            <button id="send" onclick="messagef()"><b>Send</b></button>
+        </div>
+    </div>
+    <script>
+        var socket = io.connect("http://localhost:3000");
+        var message=document.getElementById("message");
+        var username=document.getElementById("username");
+        //var send=document.getElementById("send");
+        var chat=document.getElementById("screen");
+        function messagef(){
+            if(message.value.trim() != "" && username.value.trim() != "" ){                    
+                socket.emit('message',{user:username.value,message: message.value});
+                message.value = "";
+            }
+        }
+        socket.on('message',function(data){
+            chat.innerHTML += '<div class="uname"><p><b>' + data.user + ' : </b>' + data.message + '</p></div><br>';
+        })
+    </script>
+</body>
+</html>

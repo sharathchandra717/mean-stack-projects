@@ -1,0 +1,34 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.head{
+    text-align: center;
+}
+.user{
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    background: #2b2a2a;
+    width: 100%;
+    left: 0px;
+}
+#message{
+    width: 90%;
+    height: 30px;
+}
+#username{
+    height: 30px;
+}
+#send{
+    width: 8%;
+    height: 36px;
+}
+#screen{
+    overflow: auto;
+    max-height: 450px;
+}
+.uname{
+    background: #a7a7a7;
+    padding: 4px 4px 4px 30px;
+    border-radius: 30px;
+}
