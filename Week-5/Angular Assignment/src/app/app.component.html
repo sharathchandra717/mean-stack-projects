@@ -1,0 +1,41 @@
+<div [hidden]="show" (click)="show=!show" class="basic-div">
+  click on this div to hide using <b>[hidden]</b>
+</div>
+<button [hidden]="!show" (click)="show=!show" class="basic-btn">Click me to unhide the div using event binding</button>
+<br *ngIf="show"> <br>
+
+<div *ngIf="show1" (click)="show1=!show1" class="basic-div">
+  click on this div to hide using <b>ngIf</b>
+</div>
+<button *ngIf="!show1" (click)="show1=!show1" class="basic-btn">Click me to show the div using event binding</button>
+<br *ngIf="!show1"> <br>
+
+<div [ngClass]="{color1: show2, color2: !show2 }">
+  <button (click)="show2=!show2">click me to apply style using ngClass</button>
+</div><br>
+
+<div [ngStyle]="{'background':'#33cc00', 'font-size':'20px' , 'padding':'20px'}">
+  This div is styled using [ngStyle]
+</div><br>
+
+<div [ngStyle]="{'border': '1px solid #0080ff' , 'padding':'20px' , 'border-radius':'5px'}">
+  <p [ngStyle]="{'font-size':'20px'}" >Demonstration of Dependency Injection using ngFor Variables(even, odd, first, last, index) and ngIf</p>
+  <button class="btn" *ngIf="!showtable" (click)="showTable()">Show Table</button>
+  <!-- <button class="btn" *ngIf="showtable" (click)="showTable()">Hide Table</button><br><br> -->
+  <table *ngIf="showtable">
+    <tr>
+      <th>Sno</th>
+      <th>Name</th>
+      <th>Email id</th>
+      <th>Age</th>
+      <th>Even or Odd</th>
+    </tr>
+    <tr *ngFor="let row of rows_data;let rownum = index; let even = even; let odd = odd;let first = first; let last = last" [ngClass]="{evenrow: even, oddrow: odd, firstrow: first, lastrow: last}">
+      <td>{{rownum+1}} <span *ngIf="first">(first row)</span> <span *ngIf="last">(last row)</span></td>
+      <td>{{row.name}}</td>
+      <td>{{row.email}}</td>
+      <td>{{row.age}}</td>
+      <td><span *ngIf="even">Even Row</span><span *ngIf="odd">Odd Row</span></td>
+    </tr>
+  </table>
+</div>
