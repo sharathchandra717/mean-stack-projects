@@ -17,7 +17,7 @@ app.get('/', function (req, res,next) {
 app.listen(3000,()=>console.log("listening on 3000"));
 ```
 ```
-output:
+output(on console):
 listening on 3000
 Request Type: GET   // called by browser
 Request Type: POST  //called by postman
