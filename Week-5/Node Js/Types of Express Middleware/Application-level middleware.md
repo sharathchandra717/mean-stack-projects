@@ -1,4 +1,5 @@
 ## Application-level middleware
+Bind application-level middleware to an instance of the app object by using the app.use() and app.METHOD() functions, where METHOD is the HTTP method of the request that the middleware function handles (such as GET, PUT, or POST).
 ```
 var express = require('express')
 var app = express()
