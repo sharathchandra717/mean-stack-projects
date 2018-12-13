@@ -1,5 +1,8 @@
 var students = require('./students.json');
 var router = require('express').Router();
+router.get('/',(req,res)=>{
+    res.json(students);
+});
 router.get('/:id',(req,res)=>{
     //console.log(req.params.id);
     // res.json(students.find(x => x.id == req.params.id));
