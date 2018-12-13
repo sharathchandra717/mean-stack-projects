@@ -11,7 +11,7 @@ body:
 ![Output](https://raw.githubusercontent.com/sharathchandra717/Berkadia-Assignments/master/Week-5/Node%20Js/Sample%20Node%20Microservice/Outputs/Screenshot%20(139).png)
 # List students: GET http://localhost:3000/student/
 ![Output](https://raw.githubusercontent.com/sharathchandra717/Berkadia-Assignments/master/Week-5/Node%20Js/Sample%20Node%20Microservice/Outputs/Screenshot%20(141).png)
-# Update a student: PUT http://localhost:3000/student/
+# Update a student: POST http://localhost:3000/student/
 ```
 body:
 {
