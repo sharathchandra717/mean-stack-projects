@@ -1,0 +1,21 @@
+<div class="container">
+  <br>
+  <h1> {{data.name}}'s Profile </h1><br>
+  <div class="card">
+      <img class="card-img-top" src="/assets/batman1.jpg" alt="Card image cap">
+      <div class="card-body">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 card-title">{{data.name}}</h5>
+            <small>was active {{data.act}}</small>
+        </div>
+        <br>
+        <p class="card-text">
+          <i class="fas fa-university"></i>&nbsp;&nbsp; Is studying in {{data.clg}} <br><br>
+          <i class="fas fa-info-circle"></i>&nbsp;&nbsp; {{data.details}} <br><br>
+          <i class="fas fa-thumbs-up"></i>&nbsp;&nbsp; Hobby: {{data.hobbies}}
+        </p>
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="back()"><i class="fas fa-arrow-circle-left"></i> Back</button>
+</div>

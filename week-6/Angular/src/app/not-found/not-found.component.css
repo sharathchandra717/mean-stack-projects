@@ -1,0 +1,9 @@
+.not{
+    margin: auto;
+    /* width: 75%; */
+    /* height: 50vh; */
+    border: 2px solid green;
+    border-radius: 5px;
+    /* padding: 10px; */
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+<br>
+<div class="container">
+  <h2>List of Profiles</h2>
+  <div class="list-group">
+      <a *ngFor="let data of data" 
+        class="list-group-item list-group-item-action flex-column align-items-start"
+        [routerLink]="['/Profiles',data.id]">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{data.id}}. {{data.name}}</h5>
+          <small>{{data.act}}</small>
+        </div>
+        <!-- <p class="mb-1">{{data.details}}</p> -->
+        <small>{{data.clg}}</small>
+      </a>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="home()"><i class="fas fa-home"></i> Home</button>
+</div>
+<br>
