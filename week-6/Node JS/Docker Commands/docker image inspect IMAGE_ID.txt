@@ -1,0 +1,97 @@
+[    {
+        "Id": "sha256:a64bafd2e9178508e1e6b90378426bf2a172fc2e773b65255a76ce5b345ae6d8",        "RepoTags": [
+            "sample:latest"        ],
+        "RepoDigests": [],        "Parent": "sha256:e1d105f72d4c3baf704cea90c52ec89789b0076063ce55ba8b9bb4df3fb17a41",
+        "Comment": "",        "Created": "2018-12-21T18:08:54.609362021Z",
+        "Container": "e2010b744d0cab4973d83316030a45600e9bbe183c9032bd7c47e540bb76b073",
+        "ContainerConfig": {
+            "Hostname": "e2010b744d0c",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NODE_VERSION=10.14.2",
+                "YARN_VERSION=1.12.3"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"npm\" \"start\"]"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:e1d105f72d4c3baf704cea90c52ec89789b0076063ce55ba8b9bb4df3fb17a41",
+            "Volumes": null,
+            "WorkingDir": "/src/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "DockerVersion": "18.03.1-ce",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NODE_VERSION=10.14.2",
+                "YARN_VERSION=1.12.3"
+            ],
+            "Cmd": [
+                "npm",
+                "start"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:e1d105f72d4c3baf704cea90c52ec89789b0076063ce55ba8b9bb4df3fb17a41",
+            "Volumes": null,
+            "WorkingDir": "/src/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 76989112,
+        "VirtualSize": 76989112,
+        "GraphDriver": {
+            "Data": {
+                "RootDir": "/var/lib/docker/overlay/fad8fc3241b0ef624521d675c4f76428be60b95104f678b0d3f8f3026823a1c3/root"
+            },
+            "Name": "overlay"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:7bff100f35cb359a368537bb07829b055fe8e0b1cb01085a3a628ae9c187c7b8",
+                "sha256:9abb3cbc2853b4ba90c22cbc7ba81d7cc4ff4503b2bf72aea6f0f6144ba18011",
+                "sha256:4c1a7c5d5080f883d484012297f9e0e9fa5fd6ff865226886a98d23ad8358691",
+                "sha256:2ce320d1ed6aaf87516a069356cfd2fac66e67af1c73b99b06db08b796b87b7f",
+                "sha256:9e9ccfc8776abe28b8d09b4d44463c260501cc144eb513db61e8c6b85c58d6fa",
+                "sha256:3611f8ea441042dfe35bfce84f102c3e8a453c91fac70d98e83b7a7fdee60796",
+                "sha256:bc5f1b4d683beffd7f077040858c8f3dff49e887cf1f43a2d755d6a0a17e8bdb"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2018-12-21T18:08:54.838134948Z"
+        }
+    }
+]

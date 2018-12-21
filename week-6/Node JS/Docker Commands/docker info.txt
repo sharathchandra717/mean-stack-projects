@@ -1,0 +1,42 @@
+Containers: 2
+ Running: 1
+ Paused: 0
+ Stopped: 1
+Images: 13
+Server Version: 18.03.1-ce
+Storage Driver: overlay
+ Backing Filesystem: extfs
+ Supports d_type: true
+Logging Driver: json-file
+Cgroup Driver: cgroupfs
+Plugins:
+ Volume: local
+ Network: bridge host macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
+Swarm: inactive
+Runtimes: runc
+Default Runtime: runc
+Init Binary: docker-init
+containerd version: 773c489c9c1b21a6d78b5c538cd395416ec50f88
+runc version: 4fc53a81fb7c994640722ac585fa9ca548971871
+init version: 949e6fa
+Security Options:
+ seccomp
+  Profile: default
+Kernel Version: 4.14.67-1-lts
+Operating System: Arch Linux
+OSType: linux
+Architecture: x86_64
+CPUs: 1
+Total Memory: 737.5MiB
+Name: host01
+ID: RPJ4:GR4W:TYXD:LYDN:EKX3:KYXN:YBM6:O6XP:MFNK:J6KV:V3C5:QV4J
+Docker Root Dir: /var/lib/docker
+Debug Mode (client): false
+Debug Mode (server): false
+Registry: https://index.docker.io/v1/
+Labels:
+Experimental: false
+Insecure Registries:
+ 127.0.0.0/8
+Live Restore Enabled: false
