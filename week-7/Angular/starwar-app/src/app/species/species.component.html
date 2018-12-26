@@ -1,0 +1,64 @@
+<div class="container" *ngIf="!toggle">
+  <h1 *ngIf="data" style="color:#ff0000">Species List of StarWars
+    <button (click)="home()" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+      <i class="fas fa-home"></i><b> Home</b>
+    </button>
+  </h1>
+  <br>
+  <div *ngFor="let data of data" style="padding:3px">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{data.name}}</h4>
+        <p class="card-text">
+          <strong>Classification</strong>: {{data.classification}}<br> 
+          <strong>Average Lifespan</strong>: {{data.average_lifespan}}<br>
+        </p><hr>
+        <button (click)="more(data.name)" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+            <b>More </b> <i class="fas fa-angle-double-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="container" *ngIf="toggle">
+  <h1 style="color:#ff0000">
+    {{info.name}} species data 
+    <button (click)="back()" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+      <i class="fas fa-arrow-left"></i><b> Back</b>
+    </button> 
+  </h1>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Name: {{info.name}}</h4>
+      <hr>
+          <strong>Classification</strong>: {{info.classification}}<br> 
+          <strong>Designation</strong>: {{info.designation}}<br>
+          <strong>Average Height</strong>: {{info.average_height}} <br>
+          <strong>Skin Color</strong>: {{info.skin_colors}} <br>
+          <strong>Hair Color</strong>: {{info.hair_colors}} <br>
+          <strong>Eye Color</strong>: {{info.eye_colors}} <br>
+          <strong>Average Lifespan</strong>: {{info.average_lifespan}} <br>
+          <div *ngIf="homeworld"><strong>Homeworld</strong>: {{homeworld.name}} <br></div>
+          <strong>Language</strong>: {{info.language}} <br>
+          <div *ngIf="peoples?.length > 0">
+            <strong>People({{peoples.length}})</strong>: <br>
+            <ul>
+              <li *ngFor="let people of peoples"> {{people.name}} </li>
+            </ul>
+          </div>
+          <div *ngIf="films?.length > 0">
+            <strong>Films({{films.length}})</strong>: <br>
+            <ul>
+              <li *ngFor="let film of films"> {{film.title}} </li>
+            </ul>
+          </div>
+        <strong>Created</strong>: {{info.created}} <br>
+        <strong>Last Edited</strong>: {{info.edited}}
+    </div>
+  </div>
+  <br>
+</div>
+  

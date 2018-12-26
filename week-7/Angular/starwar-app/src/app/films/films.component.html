@@ -1,0 +1,77 @@
+<div class="container" *ngIf="!toggle">
+  <h1 *ngIf="data" style="color:#ff0000">Films List of StarWars
+    <button (click)="home()" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+        <i class="fas fa-home"></i><b> Home</b>
+    </button>
+  </h1>
+  <br>
+  <div *ngFor="let data of data" style="padding:3px">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{data.title}}</h4>
+        <p class="card-text">
+          <strong>Director</strong>: {{data.director}} <br> 
+          <strong>Release Date</strong>: {{data.release_date}}<br>
+        </p><hr>
+        <button (click)="more(data.episode_id)" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+            <b>More </b> <i class="fas fa-angle-double-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="container" *ngIf="toggle">
+  <h1 style="color:#ff0000">
+    {{info.title}} movie data 
+    <button (click)="back()" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+      <i class="fas fa-arrow-left"></i><b> Back</b>
+    </button> 
+  </h1>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Name: {{info.title}}</h4>
+      <hr>
+        <strong>Episode Id</strong>: {{info.episode_id}}<br> 
+        <strong>Opening Crawl</strong>:<br> {{info.opening_crawl}} <br>
+        <strong>Director</strong>: {{info.director}} <br>
+        <strong>Producer</strong>: {{info.producer}} <br>
+        <strong>Release Date</strong>: {{info.release_date}} <br>
+        <div *ngIf="characters?.length > 0">
+          <strong>Characters({{characters.length}})</strong>: <br>
+          <ul>
+            <li *ngFor="let character of characters"> {{character.name}} </li>
+          </ul>
+        </div>
+        <div *ngIf="planets?.length > 0">
+          <strong>Planets({{planets.length}})</strong>: <br>
+          <ul>
+            <li *ngFor="let planet of planets"> {{planet.name}} </li>
+          </ul>
+        </div>
+        <div *ngIf="starships?.length > 0">
+          <strong>Starships({{starships.length}})</strong>: <br>
+          <ul>
+            <li *ngFor="let starship of starships"> {{starship.name}} </li>
+          </ul>
+        </div>
+        <div *ngIf="vehicles?.length > 0">
+          <strong>Vehicles({{vehicles.length}})</strong>: <br>
+          <ul>
+            <li *ngFor="let vehicle of vehicles"> {{vehicle.name}} </li>
+          </ul>
+        </div>
+        <div *ngIf="species?.length > 0">
+          <strong>Species({{species.length}})</strong>: <br>
+          <ul>
+            <li *ngFor="let specie of species"> {{specie.name}} </li>
+          </ul>
+        </div>
+        <strong>Created</strong>: {{info.created}} <br>
+        <strong>Last Edited</strong>: {{info.edited}}
+    </div>
+  </div>
+  <br>
+</div>

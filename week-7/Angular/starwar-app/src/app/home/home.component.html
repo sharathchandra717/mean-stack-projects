@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+      <div *ngFor="let data of mainData1" [routerLink]="['/'+data.name]" class="col-sm-4">
+        <div class="card">
+          <div class="center">
+              <span style="font-size: 5em; color: #ff0000;">
+                <i [class]="data.cl"></i>
+              </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title center">{{data.name | titlecase}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div *ngFor="let data of mainData2" [routerLink]="['/'+data.name]" class="col-sm-4">
+        <div class="card">
+          <div class="center">
+              <span style="font-size: 5em; color: #ff0000;">
+                <i [class]="data.cl"></i>
+              </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title center">{{data.name | titlecase}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+

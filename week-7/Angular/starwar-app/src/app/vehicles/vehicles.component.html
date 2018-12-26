@@ -1,0 +1,65 @@
+<div class="container" *ngIf="!toggle">
+  <h1 *ngIf="data" style="color:#ff0000">Vehicles List of StarWars
+    <button (click)="home()" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+      <i class="fas fa-home"></i><b> Home</b>
+    </button>
+  </h1>
+  <br>
+  <div *ngFor="let data of data" style="padding:3px">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{data.name}}</h4>
+        <p class="card-text">
+          <strong>Model</strong>: {{data.model}}<br> 
+          <strong>Manufacturer</strong>: {{data.manufacturer}}<br>
+        </p><hr>
+        <button (click)="more(data.name)" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+          <b>More </b> <i class="fas fa-angle-double-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="container" *ngIf="toggle">
+  <h1 style="color:#ff0000">
+    {{info.name}}'s data 
+    <button (click)="back()" type="button" class="btn btn-danger" style="background-color: #ff0000;border:0px;color:#000">
+      <i class="fas fa-arrow-left"></i><b> Back</b>
+    </button> 
+  </h1>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Name: {{info.name}}</h4>
+      <hr>
+          <strong>Model</strong>: {{info.model}}  <br> 
+          <strong>Manufacturer</strong>: {{info.manufacturer}} <br>
+          <strong>cost_in_credits</strong>: {{info.cost_in_credits}} credits <br>
+          <strong>Length</strong>: {{info.length}} <br>
+          <strong>Max Atmosphering Speed</strong>: {{info.max_atmosphering_speed}} <br>
+          <strong>Crew</strong>: {{info.crew}} <br>
+          <strong>Passengers</strong>: {{info.passengers}} <br>
+          <strong>Cargo Capacity</strong>: {{info.cargo_capacity}} <br>
+          <strong>Consumables</strong>: {{info.consumables}} <br>
+          <strong>Vehicle Class</strong>: {{info.vehicle_class}} <br>
+          <div *ngIf="pilots?.length > 0">
+            <strong>Pilots({{pilots.length}})</strong>: <br>
+            <ul>
+              <li *ngFor="let pilot of pilots"> {{pilot.name}} </li>
+            </ul>
+          </div>
+          <div *ngIf="films?.length > 0">
+            <strong>Films({{films.length}})</strong>: <br>
+            <ul>
+              <li *ngFor="let film of films"> {{film.title}} </li>
+            </ul>
+          </div>
+        <strong>Created</strong>: {{info.created}} <br>
+        <strong>Last Edited</strong>: {{info.edited}}
+    </div>
+  </div>
+  <br>
+</div>
+    
