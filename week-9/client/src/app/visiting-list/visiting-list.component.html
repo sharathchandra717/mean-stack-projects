@@ -1,0 +1,47 @@
+<div class="container">
+  <br>
+  <div class="row" *ngIf="data?.length>0">
+    <div class="col-9">
+        <h2>
+          {{data[0]?.name}}'s Visiting list
+        </h2>
+    </div>
+    <div class="col-2">
+      <button type="button" (click)="logout()" class="btn btn-danger btn-sm">Logout</button>
+    </div>
+  </div>
+  <div class="mx-auto" style="width: 260px;" *ngIf="data?.length==0">
+    <br>
+    <div class="card">
+        <div class="card-body">
+          <h4>
+            {{"nothing found here" | titlecase}}
+          </h4>
+          <button type="button" (click)="logout()" class="btn btn-danger btn-sm">Logout</button>
+        </div>
+    </div>
+  </div>
+  <table class="table" *ngIf=" data?.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">House Name</th>
+        <th scope="col">Area</th>
+        <th scope="col">Date</th>
+        <th scope="col">BHK</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let item of data;let rownum=index">
+        <th scope="row">{{rownum+1}}</th>
+        <td>{{item?.hname}}</td>
+        <td> {{item?.area_name}} </td>
+        <td> {{item?.date}}</td>
+        <td> {{item?.nbhk}}</td>
+        <td> {{item?.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+      
+</div>

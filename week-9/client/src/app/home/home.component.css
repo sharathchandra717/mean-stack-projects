@@ -1,0 +1,25 @@
+/*  */
+.landing{
+    background:url("../../assets/landing.png") no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    overflow: hidden;
+    height: 60vh;
+    padding: 0 16px;
+}
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.heading{
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+}
+  
