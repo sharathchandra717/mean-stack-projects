@@ -1,2 +1,1 @@
-# Berkadia-Assignments
-Weekly Assignments
+# Mean Stack Projects
